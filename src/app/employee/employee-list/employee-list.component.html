@@ -1,0 +1,30 @@
+
+
+<nav class="navbar navbar-dark bg-dark d-flex flex-row-reverse">
+    <a class="btn btn-success"  routerLink="/employee-add"> Employee add</a>
+  </nav>
+  
+
+<table class="table " style="margin-top: 50px;">
+  <thead>
+    <tr class="table-dark">
+      <th  scope="col">ID</th>
+      <th  scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Email</th>
+      <th scope="col">Technology</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let value of data">
+      <th scope="row">{{value.id}}</th>
+      <th scope="row">{{value.fname}}</th>
+      <td scope="row">{{value.lname}}</td>
+      <td scope="row">{{value.email}}</td>
+      <td scope="row">{{value.email}}</td>
+      <td scope="row"><button class="btn btn-danger" (click)="delete(value.id)">Delete</button></td>
+    </tr>
+   
+  </tbody>
+</table>
